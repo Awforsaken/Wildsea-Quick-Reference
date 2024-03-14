@@ -1,0 +1,274 @@
+<style>
+    html, body {
+        height: 100%
+    }
+    h1 {
+        grid-area: header;
+        all: unset;
+        font-size: xx-large;
+        font-weight: bold;
+    }
+    h2 {
+        all: unset;
+        font-size: x-large;
+        font-weight: bold;
+    }
+    p {
+        margin: 0px;
+    }
+    ul {
+        margin-top: 5px;
+        padding-left: 25px;
+        list-style-type: circle;
+    }
+    .box {
+        padding: 10px;
+        border-style: solid;
+        border-radius: 15px;
+    }
+    .page {
+        padding: 5px;
+    }
+    .flex-column {
+        display: flex;
+        flex-direction: column;
+    }
+    .flex-row {
+        display: flex;
+        flex-direction: row;
+    }
+    .montages {
+        width: 75%;
+        margin-bottom: 5px;
+    }
+    .montages td {
+        padding: 10px;
+    }
+    .montages tr {
+        vertical-align: top;
+    }
+    .ship-ratings {
+        margin-left: 5px;
+        margin-bottom: 5px;
+        width: 25%;
+    }
+    .ship-ratings th {
+        text-align: left;
+    }
+    .ship-ratings table th,
+    .ship-ratings table td {
+        padding: 10px;
+    }
+    .ship-ratings table tr:nth-child(odd) {
+        background-color: lightgray;
+    }
+
+    .journeys {
+        display: grid;
+        grid-template: 
+        'departure progress progress arrival'
+        'helm watch tending cart'
+        'helm watch tending engage'
+        'helm watch tending weather';
+        gap: 25px;
+    }
+    .journeys p {
+        margin-bottom: 10px;
+    }
+
+    .departure {
+        grid-area: departure;
+    }
+    .progress {
+        grid-area: progress;
+    }
+    .arrival {
+        grid-area: arrival;
+    }
+    .helm {
+        grid-area: helm;
+    }
+    .watch {
+        grid-area: watch;
+    }
+    .tending {
+        grid-area: tending;
+    }
+    .cart {
+        grid-area: cart;
+    }
+    .engage {
+        grid-area: engage;
+    }
+    .weather {
+        grid-area: weather;
+    }
+</style>
+
+<div class="page">
+    <div class="flex-row">
+        <div class="box montages">
+            <h1>Montages</h1>
+            <table>
+                <tr>
+                    <td>
+                        <h2>Acquisition</h2>
+                        <p><em>Acquires Resources in appropriate areas with three approaches. use the <strong>Acquisition Results</strong> table.</em></p>
+                    </td>
+                    <td>
+                        <h2>Recovery</h2>
+                        <p><em>Each option requires a Resource or appropriate environment (the Resource can be spent and automatically take the Conflict result if desired). Uses the <strong>Recovery</strong> table.</em></p>
+                    </td>
+                    <td>
+                        <h2>Creation</h2>
+                        <p><em>Combines Resources to create temporary Aspects. Each temporary Aspect has a name, track, useful ability, and is used up forever when filled. Uses the <strong>Creation Roll Results</strong> table.</em></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="flex-column">
+                            <span><strong>Scavenging: </strong>Salvage.</span>
+                            <span><strong>Hunting: </strong>Specimens.</span>
+                            <span><strong>Gathering: </strong>Specimens.</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="flex-column">
+                            <span><strong>Healing: </strong>Requires an appropriate Specimen. Clears marks from Traits or animals.</span>
+                            <span><strong>Repairing: </strong>Requires appropriate Salvage. Clears marks from Gear or mechanicals.</span>
+                            <span><strong>Relaxing: </strong>Requires an appripriate Whisper. Clears marks from Mires.</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="flex-column">
+                            <span><strong>Concocting: </strong>Requires 2 Resources of any type. Makes a related potion.</span>
+                            <span><strong>Cooking: </strong>Requires 2 Specimens. Makes a full meal with related property.</span>
+                            <span><strong>Crafting: </strong>Requires 2 Salvage. Makes a piece of useful temporary Gear.</span>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    
+        <div class="box ship-ratings">
+            <h1>Ship Ratings</h1>
+            <table>
+                <tr>
+                    <th>Armor</th>
+                    <td><p>How well it resists damage.</p></td>
+                </tr>
+                <tr>
+                    <th>Seals</th>
+                    <td><p>How well it keeps the Wildsea out.</p></td>
+                </tr>
+                <tr>
+                    <th>Speed</th>
+                    <td><p>How fast it is.</p></td>
+                </tr>
+                <tr>
+                    <th>Saws</th>
+                    <td><p>How it cuts and rams.</p></td>
+                </tr>
+                <tr>
+                    <th>Stealth</th>
+                    <td><p>How well it avoids notice.</p></td>
+                </tr>
+                <tr>
+                    <th>Tilt</th>
+                    <td><p>How well it maneuvers.</p></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    <div class="box">
+        <h1>Journeys</h1>
+        <br/>
+        <br/>
+        <div class="journeys">
+            <div class="departure">
+                <h2>I. Departure</h2>
+                <p>Set destination. <em>Choose an option to run:</em></p>
+                <ul>
+                    <li>Montage</li>
+                    <li>Scene</li>
+                    <li>Checklist of preparations</li>
+                </ul>
+            </div>
+            <div class="progress">
+                <h2>II. Progress & Encounters</h2>
+                <div class="flex-row">
+                    <div>
+                        <p>Crewmembers can take turns <strong>At the Helm</strong> and <strong>On Watch</strong>.</p>
+                        <br/>
+                        <p>Boxes marked on Firefly's secret tracks for <strong>Progress, Risk, Pathfinding</strong> (if someone is Cartographizing) and <strong>Riot</strong> (if poor leadership, treatment, or danger risks mutiny).</p>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>Filling <strong>Progress</strong> track ends journey.</li>
+                            <li>Filling <strong>Risk</strong> track means encountering powerful foe/threat.</li>
+                            <li>Filling <strong>Pathfinding</strong> track provides the cartographer with relevant Chart.</li>
+                            <li>Filling <strong>Riot</strong> track results in potential mutiny.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="arrival">
+                <h2>III. Arrival</h2>
+                <p>Arrival at the final destination when the Progress track is complete.</p>
+            </div>
+        
+            <div class="helm">
+                <h2>At the Helm</h2>
+                <p><em>Choose an option:</em></p>
+                <div class="flex-column">
+                    <p><strong>Cut a Path: </strong>Travel at decent speed, safely. Mark a single Progress box. When Watch Roll is made, choose to Encounter or steer clear easily.</p>
+                    <p><strong>Forge Ahead: </strong>Swift but rough passage. Mark 2 Progress boxes. When Watch Roll is made, ship usually blunders into encounter or avoids it with damage.</p>
+                    <p><strong>Drop Anchor: </strong>Stop to rest, no Progress, little fear of interruption. Undercrew takes watch, crew can take a Montage.</p>
+                    <p><strong>Challenging Terrain: </strong>Can force a Ratings Roll to progress.</p>
+                </div>
+            </div>
+            <div class="watch">
+                <h2>On Watch</h2>
+                <p><em>Choose an option:</em></p>
+                <div class="flex-column">
+                    <p><strong>Make a Discovery: </strong>Choose a Chart, add a Whisper, interpret. Both are then lost.</p>
+                    <p><strong>Make a random roll</strong> on Watch Roll Results.</p>
+                </div>
+                <strong>Threat</strong>
+                <div>
+                    <p>Firefly secretly rolls 1d6 (2d6, take highest if crew has Chart of area) to determine Threat level of Encounters:</p>
+                    <ul>
+                        <li><strong>6: </strong> Danger-free opportunity.</li>
+                        <li><strong>5 or 4: </strong>Hazardous encounter with useful payoff.</li>
+                        <li><strong>3, 2, or 1: </strong>Immediate danger with little payoff.</li>
+                    </ul>
+                    <p>Firefly usually gives clues to the level of any threat.</p>
+                </div>
+            </div>
+            <div class="tending">
+                <h2>Tending the Engine</h2>
+                <p><em>Choose an option:</em></p>
+                <div class="flex-column">
+                    <p><strong>Tend to the Engine: </strong>Immediately hijack focus if there are any problems relating to the engine to attempt an instant fix/bypass.</p>
+                    <p><strong>Overload the Engine: </strong>Uses a resource suitable for fuel. Increase impact on a roll to take advantage of the ship's temporary power/speed, or mark additional box on journey track.</p>
+                    <p><strong>Muffle the Engine: </strong>Uses a soft, muffling resource. Increase impact on a roll taking advantage of the ship's quieter profile or stealthily leave an area without making a roll (if not already spotted).</p>
+                </div>
+            </div>
+            <div class="cart">
+                <h2>Cartographizing</h2>
+                <p>Slowly create chart of the area being travelled - mark the Firefly's Pathfinding track every time an important landmark is found. When the track is fully marked, gain a chart.</p>
+            </div>
+            <div class="engage">
+                <h2>Engaging an Encounter</h2>
+                <p><strong>Choice: </strong>The crew chooses from options provided by the Firefly.</p>
+                <p><strong>Challenge: </strong>A threat to the ship. Player At the Helm may need to make Ratings Rolls.</p>
+                <p><strong>Scene Encounter: </strong>Usuaully when the players leave the ship.</p>
+            </div>
+            <div class="weather">
+                <h2>Watching the Weather</h2>
+                <p>Roll 1d6 on Weather-Watching Results.</p>
+            </div>
+        </div>
+    </div>
+</div>

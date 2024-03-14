@@ -1,0 +1,492 @@
+<style>
+    html,body {
+        height: 100%;
+    }
+    h1 {
+        padding: 0%;
+        margin-top: 0px;
+        margin-bottom: 5px;
+        font-size: medium;
+        grid-area: header;
+        text-transform: uppercase;
+    }
+    h2 {
+        padding: 0%;
+        margin: 0%;
+        font-size: large;
+        text-transform: capitalize;
+    }
+    ul {
+        list-style-type: circle;
+        padding-left: 20px
+    }
+    p {
+        all: unset;
+    }
+    table {
+        margin-top: 10px;
+    }
+    table tr {
+        line-height: 20px;
+        padding: 5px;
+    }
+    table tr:nth-child(odd) {
+        background-color: lightgray;
+    }
+    table th {
+        padding: 5px;
+        text-align: left;
+    }
+    table td {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    .page {
+        padding: 5px;
+        display: grid;
+        grid-template:
+            'edges skills skills languages'
+            'cut impact mires drives'
+            'injuries damage resistance resources'
+            'length damage resistance resources'
+        ;
+        gap: 5px;
+        grid-auto-flow: column;
+    }
+
+    .box {
+        padding: 10px;
+        border-style: solid;
+        border-radius: 15px;
+        width: auto;
+    }
+
+    .flex-column {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        vertical-align: top;
+    }
+
+    .flex-column p+p {
+        margin-top: 10px;
+    }
+
+    .edges {
+        grid-area: edges;
+    }
+    .skills table td {
+        min-height: 40px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .skills {
+        grid-area: skills;
+        width: fit-content;
+    }
+    .skills-table {
+        display: grid;
+        grid-template:
+        'header header'
+        'column-1 column-2';
+        grid-auto-rows: lfr;
+        column-gap: 10px;
+    }
+    .skills-table .column-1 {
+        grid-area: column-1;
+        display: flex;
+        flex-direction: column;
+    }
+    .skills-table .column-2 {
+        grid-area: column-2;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .languages {
+        grid-area: languages;
+    }
+
+    .cut {
+        grid-area: cut;
+    }
+
+    .impact {
+        grid-area: impact;
+    }
+
+    .mires {
+        grid-area: mires;
+    }
+
+    .drives {
+        grid-area: drives;
+    }
+
+    .injuries {
+        grid-area: injuries;
+    }
+
+    .damage-types {
+        grid-area: damage;
+    }
+
+    .resistance {
+        grid-area: resistance;
+    }
+    .resistance p {
+        margin-bottom: 10px;
+    }
+
+    .resources {
+        grid-area: resources;
+    }
+
+    .track-length {
+        grid-area: length;
+    }
+</style>
+
+<div class="page">
+
+    <div class="edges box flex-column">
+        <h1>Edges</h1>
+        <table>
+            <tr>
+                <th>Grace</th>
+                <td>Elegance, precision, agility.</td>
+            </tr>
+            <tr>
+                <th>Iron</th>
+                <td>Force, determination, willpower</td>
+            </tr>
+            <tr>
+                <th>Instinct</th>
+                <td>Sense, intuition, reaction</td>
+            </tr>
+            <tr>
+                <th>Sharps</th>
+                <td>Logic, wit, planning</td>
+            </tr>
+            <tr>
+                <th>Teeth</th>
+                <td>Savagery, passion, destruction</td>
+            </tr>
+            <tr>
+                <th>Tides</th>
+                <td>Exploration, learning, lore</td>
+            </tr>
+            <tr>
+                <th>Veils</th>
+                <td>Shadows, ciphers, secrecy</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="skills box flex-column">
+        <div class="skills-table">
+            <h1>Skills</h1>
+            <div class="column-1">
+                <table>
+                    <tr>
+                        <th>Brace</th>
+                        <td>Defend, determination, immobility.</td>
+                    </tr>
+                    <tr>
+                        <th>Break</th>
+                        <td>Break, smash, demolish.</td>
+                    </tr>
+                    <tr>
+                        <th>Concoct</th>
+                        <td>Chemical reactions, essence extraction, crezzerin.</td>
+                    </tr>
+                    <tr>
+                        <th>Cook</th>
+                        <td>Spices, sustenance, meats, fruits, heat.</td>
+                    </tr>
+                    <tr>
+                        <th>Delve</th>
+                        <td>Explore ruins, bypass locks/traps, identify the past.</td>
+                    </tr>
+                    <tr>
+                        <th>Flourish</th>
+                        <td>Showmanship, performance, art.</td>
+                    </tr>
+                    <tr>
+                        <th>Hack</th>
+                        <td>Chop, identify unknown plant hazards, spin tales.</td>
+                    </tr>
+                    <tr>
+                        <th>Harvest</th>
+                        <td>Forage, identify plants, nurture plants and insects.</td>
+                    </tr>
+                    <tr>
+                        <th>Hunt</th>
+                        <td>Observe, track, shoot, render specimens.</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="column-2">
+                <table>
+                    <tr>
+                        <th>Outwit</th>
+                        <td>Sneak, infiltrate, deceive</td>
+                    </tr>
+                    <tr>
+                        <th>Rattle</th>
+                        <td>Mend, maintain, invent.</td>
+                    </tr>
+                    <tr>
+                        <th>Scavenge</th>
+                        <td>Locate, collect, identify properties and value.</td>
+                    </tr>
+                    <tr>
+                        <th>Sense</th>
+                        <td>Detect, intuit, react.</td>
+                    </tr>
+                    <tr>
+                        <th>Study</th>
+                        <td>Discover, record, interpret, decipher, determine patterns and flaws.</td>
+                    </tr>
+                    <tr>
+                        <th>Sway</th>
+                        <td>Convince, argue, threaten.</td>
+                    </tr>
+                    <tr>
+                        <th>Tend</th>
+                        <td>Heal, calm, communicate with beasts, grow fruits/herbs/spices.</td>
+                    </tr>
+                    <tr>
+                        <th>Vault</th>
+                        <td>Climb, leap, dodge, tumble.</td>
+                    </tr>
+                    <tr>
+                        <th>Wavewalk</th>
+                        <td>Brachiate, swing, navigate the wilds.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="languages box flex-column">
+        <h1>Languages</h1>
+        <p><em>Use to make friends, impress others, gain extra info.</em></p>
+        <p><strong>Ranks: </strong>1 - Smattering, 2 - Knowledge, 3 - Fluency</p>
+        <table>
+            <tr>
+                <th>Low Sour</th>
+                <td>Mongrel (common).</td>
+            </tr>
+            <tr>
+                <th>Chthonic</th>
+                <td>Ancient (human).</td>
+            </tr>
+            <tr>
+                <th>Saprekk</th>
+                <td>Thick, rolling (ektus).</td>
+            </tr>
+            <tr>
+                <th>Gaudimm</th>
+                <td>Clicks, twitches, pheromones (gau).</td>
+            </tr>
+            <tr>
+                <th>Knock</th>
+                <td>Hissing, chittering (tzelicrae).</td>
+            </tr>
+            <tr>
+                <th>Brasstongue</th>
+                <td>Clipped, precise (trader).</td>
+            </tr>
+            <tr>
+                <th>Raka Spit</th>
+                <td>Rapid patter (hunters, levianthaneers).</td>
+            </tr>
+            <tr>
+                <th>Lyre-Bite</th>
+                <td>Lilting (poets, songwriters).</td>
+            </tr>
+            <tr>
+                <th>Old Hand</th>
+                <td>Sign language.</td>
+            </tr>
+            <tr>
+                <th>Signalling</th>
+                <td>Flags, flares, signal lamps (code).</td>
+            </tr>
+            <tr>
+                <th>Highvin</th>
+                <td>Primarily written (Pre-Verdant ruins).</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="cut box flex-column">
+        <h1>Cut</h1>
+        <p><em>A Cut removes results after the roll, starting with the highest. Used for...</em></p>
+        <p><strong>Cut for Difficulty: </strong>Firefly lets you know if a roll is particularly difficult.</p>
+        <p><strong>Cut for Precision: </strong>Cut 1 result to aim at a location/part. Declare before roll.</p>
+        <p><strong>Cut for Impact: </strong>Cut for extra Impact. Declare intent before rolling.</p>
+    </div>
+
+    <div class="impact box flex-column">
+        <h1>Impact</h1>
+        <p><strong>Low: </strong>Action is weaker/has less effect, marks less boxes, downgrades power.</p>
+        <p><strong>Normal: </strong>Most actions. Marks one box.</p>
+        <p><strong>High: </strong>More effect/power. Marks an extra box.</p>
+        <p><strong>Massive: </strong>Hugely potent, e.g. ship-scale armament. Marks all boxes in a track.</p>
+    </div>
+
+    <div class="mires box flex-column">
+        <h1>Mires</h1>
+        <p><em>Marked in response to events caught in, something forced to do against judgement, or in truly
+                disturbing encounters.</em></p>
+        <p>Acting contrary to a Mire automatically Cuts dice equal to the marks on this track.</p>
+    </div>
+
+    <div class="drives box">
+        <h1>Drives</h1>
+        <p><em>Advancing or satisfying a Drive gives a choice of one of...</em></p>
+        <ul>
+            <li>Gain a Whisper</li>
+            <li>Clear a mark of Mire</li>
+            <li>Gain a minor Milestone (once per session)</li>
+            <li>Gain a major Milestone, remove and replace it (once per session)</li>
+        </ul>
+    </div>
+    
+    <div class="injuries box">
+        <h2>Injuries</h2>
+        <p><em>Caused by hazards (such as monsters), disease, large amounts of damage, etc. They might:</em></p>
+        <ul>
+            <li>Force a Cut on some actions.</li>
+            <li>Take away a Skill or sense.</li>
+            <li>Add negative effects to actions.</li>
+        </ul>
+    </div>
+
+    <div class="box track-length flex-column">
+        <h2>Track Length Guidance</h2>
+        <p><strong>Default: </strong>3-track. Unlikely filled by single action/roll. Short enough that a couple
+            actions will finish it.</p>
+        <p><strong>Reminder: </strong>1 or 2-track. Likely filled with a single roll/action. An immediate, short term
+            goal/effect.</p>
+        <p><strong>Challenge: </strong>4+ track. Dominates narrative/focus. Can be difficult or longer term.</p>
+    </div>
+
+    <div class="box damage-types flex-column">
+        <h2>Damage Types</h2>
+        <table>
+            <tr>
+                <th>Blunt</th>
+                <td>Crushing - stun and break</td>
+            </tr>
+            <tr>
+                <th>Keen</th>
+                <td>Cutting - slash and bleed</td>
+            </tr>
+            <tr>
+                <th>Spike</th>
+                <td>Piercing - penetrate and impale</td>
+            </tr>
+            <tr>
+                <th>Hewing</th>
+                <td>Chopping - split and break</td>
+            </tr>
+            <tr>
+                <th>Serrated</th>
+                <td>Sawing - rip and tear</td>
+            </tr>
+            <tr>
+                <th>Toxin</th>
+                <td>Poison - sicken and confuse</td>
+            </tr>
+            <tr>
+                <th>Acid</th>
+                <td>Corrosive - melt and sear</td>
+            </tr>
+            <tr>
+                <th>Blast</th>
+                <td>Explosive - stun and shatter</td>
+            </tr>
+            <tr>
+                <th>Volt</th>
+                <td>Electrical - shock and paralyze</td>
+            </tr>
+            <tr>
+                <th>Frost</th>
+                <td>Cold - slow and freeze</td>
+            </tr>
+            <tr>
+                <th>Salt</th>
+                <td>Crystalline - dry and banish</td>
+            </tr>
+            <tr>
+                <th>Flame</th>
+                <td>Burning - melt and inspire fear</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="resistance box flex-column">
+        <h2>Resistance</h2>
+        <p>Reduces damage by one mark. Can reduce or eliminate injury.</p>
+        
+        <h2>Immunity</h2>
+        <p>Is full protection.</p>
+
+        <h2>Weakness</h2>
+        <p>Increases damage by one mark. Injuries may be more detrimental or last longer.</p>
+
+        <h2>Stacking</h2>
+        <ul>
+            <li>Two <strong>Resistances</strong> to a certain type of damage count as an <strong>Immunity</strong>.</li>
+            <li><strong>Immunity</strong> and <strong>Weakness</strong> combine as <strong>Resistance</strong>.</li>
+            <li><strong>Weakness</strong> and <strong>Resistance</strong> cancel each other out.</li>
+        </ul>
+    </div>
+
+    <div class="resources box">
+        <h2>Resource Types & Tags</h2>
+        <table>
+            <tr>
+                <th>SPECIMEN</th>
+                <td>
+                    <p><strong>Pure/Medicinal: </strong>Heals extra mark.</p>
+                    <p><strong>Heirloom: </strong>Has far more worth.</p>
+                    <p><strong>Rotten: </strong>Makes you sick if you eat it.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>SALVAGE</th>
+                <td>
+                    <p><strong>Sturdy: </strong>Repairs extra damage mark.</p>
+                    <p><strong>Ornate: </strong>Has far more worth.</p>
+                    <p><strong>Broken: </strong>Almost useless.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>WHISPER</th>
+                <td>
+                    <p><strong>Echoing: </strong> Use twice before fading.</p>
+                    <p><strong>Hungry: </strong>Removes an element of the world, rather than adding one.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>CHART</th>
+                <td>
+                    <p><strong>Faded: </strong>Almost impossible to read.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>ANY</th>
+                <td>
+                    <p><strong>Pre-Verdant: </strong>Ancient.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

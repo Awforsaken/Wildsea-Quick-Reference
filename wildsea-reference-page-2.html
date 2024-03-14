@@ -1,0 +1,303 @@
+<style>
+    html, body {
+        height: 100%;
+    }
+
+    .page-header {
+        font-size: x-large;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+    .page {
+        padding: 5px;
+    }
+    h1 {
+        all: unset;
+        font-size: x-large;
+        text-align: center;
+    }
+    h2 {
+        all: unset;
+        font-size: large;
+        font-weight: bold;
+    }
+    p {
+        margin: 0px;
+    }
+
+    .action-rolls {
+        margin-right: 5px
+    }
+    .action-rolls th {
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 20px;
+    }
+    .action-rolls td {
+        text-align: center;
+        vertical-align: bottom;
+    }
+    
+    .action-results td {
+        text-align: center;
+        line-height: 24px;
+        padding: 5px;
+    }
+    
+    .action-rolls .big {
+        font-size: xx-large;
+    }
+
+    .reading {
+        padding: 10px;
+    }
+    .reading th {
+        text-align: left;
+        padding: 10px;
+    }
+    .action-results p {
+        text-align: center;
+    }
+    .action-results table tr:nth-child(even) {
+        background-color: lightgray;
+    }
+    .action-results table td {
+        height: 70px;
+    }
+
+    .flex-row {
+        display: flex;
+        flex-direction: row;
+    }
+    .stack {
+        display: flex;
+        flex-direction: column;
+    }
+    .box {
+        border-style: solid;
+        border-radius: 15px;
+        padding: 5px;
+    }
+</style>
+
+<div class="page">
+    <h1 class="page-header">Action Rolls</h1>
+    <div class="flex-row">
+        <div class="action-rolls box">
+            <table>
+                <tr class="header-row">
+                    <th><h1>Edge</h1></th>
+                    <th><h1>Skill/Language</h1></th>
+                    <th>
+                        <div class="stack">
+                            <h1>Advantage</h1>
+                            <!--<em>Pieces of the environment, resources, aspects, favorable situations, and helpful assistance.</em>-->
+                        </div>
+                    </th>
+    
+                </tr>
+                <tr class="dice">
+                    <td>
+                        <h2 class="big">1d6</h2>
+                    </td>
+                    <td>
+                        <div class="stack">
+                            <h2>up to</h2>
+                            <h2 class="big">3d6</h2>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="stack">
+                            <h2>up to</h2>
+                            <h2 class="big">2d6</h2>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    
+        <div class="reading box">
+            <table>
+                <tr>
+                    <th><h2>Reading the Dice</h2></th>
+                    <td><p>Use the single highest single die and note if you have Doubles.</p></td>
+                </tr>
+                <tr>
+                    <th><h2>Helping Hands</h2></th>
+                    <td><p>Two crewmembers working together on the same task choose which provides the edges, advantages, or skill ranks. Both are affected by any negatives that result.</p></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="action-results">
+        <table>
+            <tr>
+                <td></td>
+                <th>
+                    <div class="stack">
+                        <h1>6</h1>
+                        <strong>Triumph</strong>
+                    </div>
+                </th>
+                <th>
+                    <div class="stack">
+                        <h1>5 or 4</h1>
+                        <strong>Conflict</strong>
+                    </div>
+                </th>
+                <th>
+                    <div class="stack">
+                        <h1>3, 2, or 1</h1>
+                        <strong>Disaster</strong>
+                    </div>
+                </th>
+                <th>
+                    <div class="stack">
+                        <h1>Doubles</h1>
+                        <strong>Twist</strong>
+                    </div>
+                </th>
+            </tr>
+            
+            <tr>
+                <th><h1>Action Results</h1></th>
+                <td>
+                    <p>Complete success, no drawbacks. Mark/clear a box on a track.</p>
+                </td>
+                <td>
+                    <p>Success with a drawback. Usually marks/clears a box.</p>
+                </td>
+                <td>
+                    <p>Failure and narrative complication or drawback. Usually doesn't mark/clear a box.</p>
+                </td>
+                <td>
+                    <p>Adds a small, potentially useful twist, suggested by any player. Firefly has final say.</p>
+                </td>
+            </tr>
+            <tr>
+                <th><h1>Attack</h1></th>
+                <td>
+                    <p>Does damage plus possible effect.</p>
+                </td>
+                <td>
+                    <p>Does damage plus maybe effect. Also suffers some damage, an effect, loses a resource, or ends in a worse position.</p>
+                </td>
+                <td>
+                    <p>Misses/does no damage. Also suffers downside like Conflict results.</p>
+                </td>
+                <td>
+                    <p>Critical hit which increases impact.</p>
+                </td>
+            </tr>
+            <tr>
+                <th><h1>Defense</h1></th>
+                <td>
+                    <p>Avoids threat completely.</p>
+                </td>
+                <td>
+                    <p>Avoids the worst. Also suffers downside like Attack above.</p>
+                </td>
+                <td>
+                    <p>Takes damage plus likely downside as per Conflict results.</p>
+                </td>
+                <td>
+                    <p>Counter does mark of damage to foe (if in range).</p>
+                </td>
+            </tr>
+            <tr>
+                <th><h1>Acquisition</h1></th>
+                <td>
+                    <p>Gain solid untainted resource.</p>
+                </td>
+                <td>
+                    <p>Gain resource with a negative tag.</p>
+                </td>
+                <td>
+                    <p>Resource not found/ruined during collection.</p>
+                </td>
+                <td>
+                    <p>Gain resource with unique/positive tag.</p>
+                </td>
+            </tr>
+            <tr>
+                <th><h1>Creation</h1></th>
+                <td>
+                    <p>Recipient gains temporary related benefit.</p>
+                </td>
+                <td>
+                    <p>Provides temporary 2-track aspect with downsides or one with no downside that doesn't quite work as intended.</p>
+                </td>
+                <td>
+                    <p>Creation has no benefits but might be ornament/culinary curiosity.</p>
+                </td>
+                <td>
+                    <p>Has an additional small, unexpected benefit.</p>
+                </td>
+            </tr>
+            <tr>
+                <th><h1>Recovery</h1></th>
+                <td>
+                    <p>Heal two marks of aspect, shit rating, injury track, mire.</p>
+                </td>
+                <td>
+                    <p>Heal one mark of aspect, ship rating, injury track, mire.</p>
+                </td>
+                <td>
+                    <p>Add extra mark of damage to aspect, ship rating, injury track, mire.</p>
+                </td>
+                <td>
+                    <p>Don't consume resource used for the recovery.</p>
+                </td>
+            </tr>
+            <tr>
+                <th><h1>Ratings</h1></th>
+                <td>
+                    <p>Bypass obstacle safely.</p>
+                </td>
+                <td>
+                    <p>Bypass obstacle but mark 1 Rating damage.</p>
+                </td>
+                <td>
+                    <p>Fail to bypass obstacle and mark 1 Rating damage.</p>
+                </td>
+                <td>
+                    <p>Unexpected event.</p>
+                </td>
+            </tr>
+            <tr>
+                <th><h1>Watch</h1></th>
+                <td>
+                    <h2>Peace</h2>
+                    <p>Montage, Meeting, Tall Tale (gain a Whisper), Tree Shanty, Undercrew Issue, Reflection (heal mire).</p>
+                </td>
+                <td>
+                    <h2>Order</h2>
+                    <p>Nearby Ship, Outpost, Survivor Needing Rescue, Wreck or Ruin, Cache of Cargo/Supplies, Conspiracy.</p>
+                </td>
+                <td>
+                    <h2>Nature</h2>
+                    <p>Weather, Natural Feature, Wonder (heal mire), Horror, Unsettled Landfall, True Wilds.</p>
+                </td>
+            </tr>
+            <tr>
+                <th><h1>Weather-Watching</h1></th>
+                <td>
+                    <h2>Clear Skies</h2>
+                    <p>Weather clears.</p>
+                </td>
+                <td>
+                    <h2>Continuation</h2>
+                    <p>Weather continues as it is.</p>
+                </td>
+                <td>
+                    <h2>A Change for the Worse</h2>
+                    <p>Driving rain/hail (lowers visibility), blazing sunshine (potential heatstroke), living storm or bizarre weather phenomenon.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
