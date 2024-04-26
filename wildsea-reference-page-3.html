@@ -1,16 +1,19 @@
 <style>
     html, body {
-        height: 100%
+        height: 100%;
+         font-family: 'Trebuchet MS', sans-serif;
     }
     h1 {
+        padding: 0%;
+        margin-top: 0px;
+        margin-bottom: 5px;
+        font-size: x-large;
         grid-area: header;
-        all: unset;
-        font-size: xx-large;
-        font-weight: bold;
+        text-transform: uppercase;
     }
     h2 {
         all: unset;
-        font-size: x-large;
+        font-size: large;
         font-weight: bold;
     }
     p {
@@ -22,9 +25,11 @@
         list-style-type: circle;
     }
     .box {
-        padding: 10px;
+        padding: 8px;
+        border-color: Gainsboro;
         border-style: solid;
-        border-radius: 15px;
+        border-radius: 8px;
+        width: auto;
     }
     .page {
         padding: 5px;
@@ -32,6 +37,7 @@
     .flex-column {
         display: flex;
         flex-direction: column;
+        flex: 1;
     }
     .flex-row {
         display: flex;
@@ -52,6 +58,10 @@
         margin-bottom: 5px;
         width: 25%;
     }
+    table {
+        margin-top: 10px;
+        border-collapse: collapse;
+    }
     .ship-ratings th {
         text-align: left;
     }
@@ -59,8 +69,13 @@
     .ship-ratings table td {
         padding: 10px;
     }
-    .ship-ratings table tr:nth-child(odd) {
-        background-color: lightgray;
+    .ship-ratings table tr{
+        line-height: 20px;
+        padding: 4px;
+        border-bottom:1px solid Gainsboro;
+    }
+    .ship-ratings table tr:last-child{
+        border-bottom: none;
     }
 
     .journeys {
@@ -70,7 +85,7 @@
         'helm watch tending cart'
         'helm watch tending engage'
         'helm watch tending weather';
-        gap: 25px;
+        gap: 24px;
     }
     .journeys p {
         margin-bottom: 10px;
@@ -78,12 +93,15 @@
 
     .departure {
         grid-area: departure;
+        border-bottom:1px solid Gainsboro;
     }
     .progress {
         grid-area: progress;
+        border-bottom:1px solid Gainsboro;
     }
     .arrival {
         grid-area: arrival;
+        border-bottom:1px solid Gainsboro;
     }
     .helm {
         grid-area: helm;
@@ -198,12 +216,12 @@
             <div class="progress">
                 <h2>II. Progress & Encounters</h2>
                 <div class="flex-row">
-                    <div>
+                    <div class="flex-column">
                         <p>Crewmembers can take turns <strong>At the Helm</strong> and <strong>On Watch</strong>.</p>
                         <br/>
                         <p>Boxes marked on Firefly's secret tracks for <strong>Progress, Risk, Pathfinding</strong> (if someone is Cartographizing) and <strong>Riot</strong> (if poor leadership, treatment, or danger risks mutiny).</p>
                     </div>
-                    <div>
+                    <div class="flex-column">
                         <ul>
                             <li>Filling <strong>Progress</strong> track ends journey.</li>
                             <li>Filling <strong>Risk</strong> track means encountering powerful foe/threat.</li>

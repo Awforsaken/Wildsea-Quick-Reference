@@ -1,6 +1,7 @@
 <style>
     html, body {
         height: 100%;
+        font-family: 'Trebuchet MS', sans-serif;
     }
 
     .page-header {
@@ -15,9 +16,12 @@
         padding: 5px;
     }
     h1 {
-        all: unset;
-        font-size: x-large;
-        text-align: center;
+        padding: 0%;
+        margin-top: 0px;
+        margin-bottom: 5px;
+        font-size: medium;
+        grid-area: header;
+        text-transform: uppercase;
     }
     h2 {
         all: unset;
@@ -27,24 +31,48 @@
     p {
         margin: 0px;
     }
-
+    table tr:last-child {
+        border-bottom: none;
+    }
     .action-rolls {
-        margin-right: 5px
+        margin-right: 4px
+    }
+
+    .action-rolls table {
+        border-collapse: collapse;
     }
     .action-rolls th {
-        padding-left: 25px;
-        padding-right: 25px;
-        padding-bottom: 20px;
+        padding: 0 16px;
+
     }
     .action-rolls td {
         text-align: center;
         vertical-align: bottom;
     }
     
+    .dice {
+        border-bottom:1px solid Gainsboro;
+        margin-bottom:4px;
+    }
+
+    .conflicts td{
+        margin-top:4px;
+    }
+
+    .action-results table {
+        border-collapse: collapse;
+    }
+    
+    .action-results tr {
+        line-height: 20px;
+        padding: 4px;
+        border-bottom:1px solid Gainsboro;
+    }
+
     .action-results td {
         text-align: center;
         line-height: 24px;
-        padding: 5px;
+        padding: 0 8px ;
     }
     
     .action-rolls .big {
@@ -61,9 +89,7 @@
     .action-results p {
         text-align: center;
     }
-    .action-results table tr:nth-child(even) {
-        background-color: lightgray;
-    }
+
     .action-results table td {
         height: 70px;
     }
@@ -71,15 +97,18 @@
     .flex-row {
         display: flex;
         flex-direction: row;
+        margin-bottom:4px;
     }
     .stack {
         display: flex;
         flex-direction: column;
     }
     .box {
+        padding: 8px;
+        border-color: Gainsboro;
         border-style: solid;
-        border-radius: 15px;
-        padding: 5px;
+        border-radius: 8px;
+        width: auto;
     }
 </style>
 
@@ -92,10 +121,7 @@
                     <th><h1>Edge</h1></th>
                     <th><h1>Skill/Language</h1></th>
                     <th>
-                        <div class="stack">
                             <h1>Advantage</h1>
-                            <!--<em>Pieces of the environment, resources, aspects, favorable situations, and helpful assistance.</em>-->
-                        </div>
                     </th>
     
                 </tr>
@@ -105,22 +131,25 @@
                     </td>
                     <td>
                         <div class="stack">
-                            <h2>up to</h2>
+                            <p>up to</p>
                             <h2 class="big">3d6</h2>
                         </div>
                     </td>
                     <td>
                         <div class="stack">
-                            <h2>up to</h2>
+                            <p>up to</p>
                             <h2 class="big">2d6</h2>
                         </div>
                     </td>
+                </tr>
+                <tr class="Conflict">
+                    <td colspan="3"><em>If you have nothing ot draw from, rol 1d6 and count Triumph results as Conflicts instead.</em></td>
                 </tr>
             </table>
         </div>
     
         <div class="reading box">
-            <table>
+            <table class="action-outcome">
                 <tr>
                     <th><h2>Reading the Dice</h2></th>
                     <td><p>Use the single highest single die and note if you have Doubles.</p></td>
@@ -133,7 +162,7 @@
         </div>
     </div>
 
-    <div class="action-results">
+    <div class="action-results box">
         <table>
             <tr>
                 <td></td>
